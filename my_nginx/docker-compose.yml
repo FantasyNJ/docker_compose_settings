@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-   db:
+   nginx:
      image: nginx:stable
      volumes:
        - $PWD/my_nginx/www:/www
@@ -10,3 +10,4 @@ services:
      restart: always
      ports:
        - "80:80"
+     command: [nginx-debug, '-g', 'daemon off;']
