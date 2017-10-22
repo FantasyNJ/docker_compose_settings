@@ -2,7 +2,7 @@ version: '2'
 
 services:
    nginx:
-     image: nginx:stable
+     image: nginx:1.12.1
      volumes:
        - $PWD/my_nginx/www:/www
        - $PWD/my_nginx/nginx:/etc/nginx
